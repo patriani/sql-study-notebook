@@ -1,200 +1,188 @@
-# sql-study-notebook
+# SQL Study Notebook
 
 A workbook designed to improve and reinforce skills in SQL, with a focus on queries, data transformation, performance analysis, and some features specific to the Oracle Database.
 
+- Recomended website: https://www.w3schools.com/sql/default.asp
 
 
-\# SQL Study Notebook
+## Study Topics
 
 
 
-Notebook criado para melhorar e consolidar habilidades em \*\*SQL\*\*, com foco em consultas, transformação de dados, análise de desempenho e recursos específicos do Oracle Database.
+### 1. CTEs (`WITH`)
 
+Study:
 
+- Simple CTEs
 
-\## 📚 Tópicos de Estudo
+- Multiple CTEs
 
+- Recursive CTEs
 
+- CTE vs Subquery vs Temporary Table
 
-\### 1. CTEs (`WITH`)
+<br>
 
 
+---
 
-Estudar:
+### 2. Analytical Functions
 
 
 
-\- CTE simples
+Allow performing calculations over a set of rows **without losing the original granularity of the data**.
 
-\- Múltiplas CTEs
 
-\- CTE recursiva
 
-\- CTE vs Subquery vs Tabela Temporária
+Key resources:
 
 
 
-\---
+- `ROW_NUMBER()`
 
+- `RANK()`
 
+- `DENSE_RANK()`
 
-\### 2. Funções Analíticas
+- `LAG()` / `LEAD()`
 
+- `SUM() OVER`
 
+- `AVG() OVER`
 
-Permitem realizar cálculos sobre um conjunto de linhas \*\*sem perder a granularidade original dos dados\*\*.
+- `MIN() / MAX() OVER`
 
+- `PARTITION BY`
 
+- `ORDER BY` inside `OVER`
 
-Principais recursos:
+- Window Frames (`ROWS BETWEEN ...`)
 
+<br>
 
 
-\- `ROW\_NUMBER()`
+---
 
-\- `RANK()`
 
-\- `DENSE\_RANK()`
+### 3. Data Transformation with SQL
 
-\- `LAG()` / `LEAD()`
 
-\- `SUM() OVER`
 
-\- `AVG() OVER`
+Study how to use SQL for **data cleansing, transformation, enrichment, and preparation**.
 
-\- `MIN() / MAX() OVER`
 
-\- `PARTITION BY`
 
-\- `ORDER BY` dentro do `OVER`
+Topics:
 
-\- Window Frames (`ROWS BETWEEN ...`)
 
 
+- `CASE`
 
-\---
+- `COALESCE` / `NULLIF`
 
+- `CAST`
 
+- String functions
 
-\### 3. Transformação de Dados com SQL
+- Date functions
 
+- `PIVOT` / `UNPIVOT`
 
+- Aggregations
 
-Estudar como utilizar SQL para \*\*limpeza, transformação, enriquecimento e preparação de dados\*\*.
+- `MERGE`
 
+- `INSERT ... SELECT`
 
+- `UPDATE`
 
-Tópicos:
+- `DELETE`
 
+- `NULL` handling
 
+- Deduplication
 
-\- `CASE`
+- Transformation using CTEs
 
-\- `COALESCE` / `NULLIF`
+<br>
 
-\- `CAST`
 
-\- Funções de string
+---
 
-\- Funções de data
 
-\- `PIVOT` / `UNPIVOT`
 
-\- Agregações
+### 4. Query and Transaction Optimization
 
-\- `MERGE`
 
-\- `INSERT ... SELECT`
 
-\- `UPDATE`
+#### SQL Tuning
 
-\- `DELETE`
 
-\- Tratamento de `NULL`
 
-\- Deduplicação
+- Execution Plan
 
-\- Transformação utilizando CTEs
+- `EXPLAIN PLAN`
 
+- `DBMS_XPLAN`
 
+- Indexes
 
-\---
+- Full Table Scan
 
+- Index Scan
 
+- JOIN Methods:
+    - Nested Loops
+    - Hash Join
+    - Merge Join
 
-\### 4. Otimização de Consultas e Transações
+- Cardinality
 
+- Selectivity
 
+- Statistics
 
-\#### SQL Tuning
+- Partitioning
 
+- Subqueries
 
+- CTEs
 
-\- Execution Plan
+- Functions in `WHERE`
 
-\- `EXPLAIN PLAN`
+- High I/O SQL
 
-\- `DBMS\_XPLAN`
+<br>
 
-\- Índices
 
-\- Full Table Scan
+#### Oracle Database
 
-\- Index Scan
 
-\- JOIN Methods:
 
-&#x20; - Nested Loops
+- `SQL_ID`
 
-&#x20; - Hash Join
+- `V$SQL`
 
-&#x20; - Merge Join
+- `V$SQLAREA`
 
-\- Cardinalidade
+- `GV$SQL`
 
-\- Seletividade
+- AWR
 
-\- Estatísticas
+- ASH
 
-\- Particionamento
+- SQL Monitor
 
-\- Subqueries
+- `DBMS_XPLAN.DISPLAY_CURSOR`
 
-\- CTEs
+<br>
 
-\- Funções no `WHERE`
 
-\- SQL com alto consumo de I/O
+---
 
 
 
-\#### Oracle Database
-
-
-
-\- `SQL\_ID`
-
-\- `V$SQL`
-
-\- `V$SQLAREA`
-
-\- `GV$SQL`
-
-\- AWR
-
-\- ASH
-
-\- SQL Monitor
-
-\- `DBMS\_XPLAN.DISPLAY\_CURSOR`
-
-
-
-\---
-
-
-
-\# 🗺️ Ordem Recomendada de Estudo
+# Recommended Study Order
 
 
 
@@ -208,59 +196,30 @@ Tópicos:
 
 5\. CTEs (`WITH`)
 
-6\. Funções analíticas
+6\. Analytical Functions
 
-7\. `CASE` / `NULL` / funções de string e data
+7\. `CASE` / `NULL` / String and Date Functions
 
 8\. `INSERT` / `UPDATE` / `DELETE` / `MERGE`
 
-9\. Views e Materialized Views
+9\. Views and Materialized Views
 
-10\. Índices
+10\. Indexes
 
 11\. Execution Plans
 
 12\. SQL Tuning
 
-13\. `SQL\_ID` + `V$SQL`
+13\. `SQL_ID` + `V$SQL`
 
 14\. AWR / ASH / SQL Monitor
 
-15\. Transações, locks e concorrência
+15\. Transactions, Locks, and Concurrency
 
-16\. Particionamento
+16\. Partitioning
 
 17\. Parallel SQL
 
-18\. Otimização avançada no Oracle
+18\. Advanced Oracle Optimization
 
-
-
-\---
-
-
-
-\## 🎯 Objetivo
-
-
-
-O objetivo não é apenas aprender a \*\*escrever SQL\*\*, mas desenvolver capacidade para:
-
-
-
-\- Criar consultas complexas e eficientes.
-
-\- Transformar e analisar dados utilizando SQL.
-
-\- Entender como o Oracle executa uma consulta.
-
-\- Identificar gargalos de desempenho.
-
-\- Analisar `SQL\_IDs` e Execution Plans.
-
-\- Diagnosticar problemas de I/O, índices, JOINs e cardinalidade.
-
-\- Trabalhar com concorrência, locks e transações.
-
-\- Aplicar técnicas de SQL Tuning em ambientes reais.
-
+<br>
